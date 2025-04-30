@@ -12,7 +12,7 @@ Maturity Level: 0 Draft"""
 * episodeEvent insert ObligationActorAndCode($actor-headneck, #SHALL:handle)
 * episodeEvent insert ObligationActorAndCode($actor-sarcoma-i4rc, #SHALL:handle)
 * surgeryType 1..* CodeableConcept "Surgery type (M)" """Primary surgery/re-excision (check with unplanned or excisional biopsy)
- 
+
 Check
 
 "Surgery (with date) is a procedure occurrence, which is 
@@ -52,8 +52,7 @@ Curative procedure intent - 4162591"""
 * typeOfSurgicalApproachOnTumour 1..* CodeableConcept "Type of surgical approach on Tumour (M)" """Describes the approach to tumor resection whether it includes skin incision (extenal or open ),  or it 's aproached through a natural orifice (Transnasal/transorbital/transoral) or if the approach combines two or more of the previous ones 
 Maybe should be a flag"""
 * typeOfSurgicalApproachOnTumour insert ObligationActorAndCode($actor-headneck, #SHALL:handle)
-* typeOfSurgicalApproachOnTumour ^comment = """
-External/Open - 4236080
+* typeOfSurgicalApproachOnTumour ^comment = """External/Open - 4236080
 Transnasal - 4050374
 Transorbital - 4044897
 Transoral - 4038679

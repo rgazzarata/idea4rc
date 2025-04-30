@@ -70,7 +70,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "At this stage represented as condition.code.
-Evaluate if it represents a morphology/hystology classification.
+Evaluate if it represents a morphology/histology classification.
 This comment applies to all the inlcuded elements."					
 * group[=].element[+].code = #CancerEpisode.hnClassification.histologySquamous					
 * group[=].element[=].display = "Histology Squamous"					
@@ -108,7 +108,7 @@ This comment applies to all the inlcuded elements."
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "At this stage represented as condition.code.
-Evaluate if it represents a morphology/hystology classification.
+Evaluate if it represents a morphology/histology classification.
 This comment applies to all the inlcuded elements."					
 * group[=].element[+].code = #CancerEpisode.sarcomaClassification.adipocyticTumours					
 * group[=].element[=].display = "Histology subgroup Adipocytic tumours"					
