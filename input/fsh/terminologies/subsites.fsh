@@ -3,7 +3,7 @@ Id: nasal-subsite-athena-i4rc
 Title: "Subsites: Athena"
 Description: "Specifies the subsites where cancers occured: Athena"
 //-------------------------------------------------------------------------------------------
-*/* ^status = #active*/
+//* ^status = #active*/
 * ^experimental = false
 
 //* codes from valueset VsNasalandParanasalSubsiteAthenaI4rc
@@ -161,7 +161,7 @@ Description: "Specifies the subsites where cancers occured: Athena"
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-/*ValueSet: UpperLowerLimbsSubsiteAthenaI4rc
+ValueSet: UpperLowerLimbsSubsiteAthenaI4rc
 Id: upperLower-limbs-subsite-athena-i4rc
 Title: "Upper and Lower limbs subsite: Athena"
 Description: "Specifies the subsite for cancers occured in Upper and Lower limbs : Athena"

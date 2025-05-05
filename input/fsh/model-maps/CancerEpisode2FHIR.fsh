@@ -24,7 +24,7 @@ Usage: #definition
 * group[=].element[=].display = "Cancer start date (M)"
 * group[=].element[=].target.code = #Condition.evidence:diagnosisDetails.detail
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #related
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "If the onsetAge is used, see group 2"
 * group[+].source = "http://hl7.eu/fhir/ig/idea4rc/StructureDefinition/CancerEpisode"
 * group[=].target = "http://hl7.eu/fhir/ig/idea4rc/StructureDefinition/Observation-diagnosis-eu-i4rc"

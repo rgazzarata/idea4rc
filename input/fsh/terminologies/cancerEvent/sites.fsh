@@ -1,10 +1,19 @@
 ValueSet: sitesVs
-Id: sitesVs
-Title:"sites-athena"
+Id: sites-vs
+Title: "Cancer site: Athena"
 Description: "Describes the primary tumor site."
 
+* ^experimental = false
+* codes from valueset siteVs
+* codes from valueset VsSubsiteAthenaI4rc
 
-*^experimental = false
+
+ValueSet: siteVs
+Id: site-vs
+Title: "Site: Athena"
+Description: "Describes the primary tumor site."
+
+* ^experimental = false
 
 * $athena#2000000067 "Nasal cavity and paranasal sinus"  
 * $athena#36769745 "Nasopharynx"  

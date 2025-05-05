@@ -1,7 +1,7 @@
 
 
 ValueSet: CancerDiagnosisVS
-Id: cancer-diagnosis-athena-VS  
+Id: cancer-diagnosis-athena-vs  
 Title: "Cancer Diagnosis: Athena"
 Description: "Codes identifying the condition for HNC and sarcome"
 
@@ -14,7 +14,7 @@ Description: "Codes identifying the condition for HNC and sarcome"
 
 ValueSet: HNCConditionLIstVS
 Id: HNC-condition-athena-vs
-Title: "HNC COnditionLIst: Athena"
+Title: "HNC ConditionList: Athena"
 Description: "Codes identifying the condition for HNC"
 
 * ^experimental = false
@@ -1913,8 +1913,7 @@ Description: "Codes identifying the condition for HNC"
 ValueSet: SarcomeListVS
 Id: sarcome-list-athena-vs
 Title: "Sarcome List: Athena"
-Description "Codes identifying the condition for sarcome"
-
+Description: "Codes identifying the condition for sarcome"
 
 * ^experimental = false
 

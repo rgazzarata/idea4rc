@@ -12,11 +12,10 @@ RuleSet: CancerConditionCommonRules
 // * extension[histologyMorphologyBehavior].value[x]
 /* * extension[histologyMorphologyBehavior].value[x] from VsICDO3Morphology (required) */
 
-
 * extension contains PreviousStatus named previousStatus 0..1
 * extension[previousStatus]
 
-* extension contains $HistologyMorphologyBehavior named histology-morphology-behavior 0..2
+* extension contains HistologyMorphologyBehavior named histology-morphology-behavior 0..2
 * extension[HistologyMorphologyBehavior]
 
 
@@ -41,8 +40,8 @@ It is envisioned that this kind of requirements could be covered by recording wh
 
 
 * bodySite
-*extension contains bodySite:site named site 0.2*
-*extension [site].valueCodeableConcept from sitesVs
+/* extension contains bodySite:site named site 0..2
+* extension [site].valueCodeableConcept from sitesVs/
 /*extension contains bodySite:subsite named subsite 0..*
 *extension[subSite].valueCodeableConcept from VsSubsiteAthenaI4rc*/
   * extension contains BodyLocationQualifier named qualifier 0..*
@@ -101,7 +100,6 @@ A primary cancer condition, the original or first tumor in the body (Definition 
 This profile should be also used for documenting primary cancer relapses during or after FLT."
 
 
-
 * extension contains $condition-occurredFollowing named condition-occurredFollowing 0..*
 * extension[condition-occurredFollowing].valueCodeableConcept 0..0
 * extension[condition-occurredFollowing].valueReference ^short = "For relapses, reference to the first occurance of this tumor."
@@ -144,8 +142,7 @@ This profile should be also used for documenting primary cancer relapses during 
 * stage.type ^definition = "As for mCODE, in IDEA4RC staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the staging system MAY appear in this element, but Data Senders and Receivers MAY ignore it."
 // * stage.type from CancerStageGroupVS (required)
 
-
-* bodySite from VsSubsiteAthenaI4rc (extensible)
+* bodySite from sitesVs (extensible)
 //   * insert AdditionalBinding (required, VsSubsiteSnomedI4rc, SNOMED based sites)
 
 /* * evidence ^slicing.discriminator.type = #value

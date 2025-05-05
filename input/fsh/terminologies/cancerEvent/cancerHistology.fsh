@@ -1,15 +1,15 @@
-ValueSet: CancerhistologyBehaviourVS
+ValueSet: CancerHistologyBehaviourVS
 Id: cancer-histology-behavior-athena-vs 
 Title: "Cancer histology behaviour: Athena"
 Description: "Codes identifing the histology behaviour of the cancer."
 
 
 * ^experimental = false
-* codes from valueset CancerhistologySubgroupVS
+* codes from valueset CancerHistologySubgroupVS
 * codes from valueset CancerHystolgyVs
 
 
-ValueSet: CancerhistologySubgroupVS
+ValueSet: CancerHistologySubgroupVS
 Id: cancer-histology-subgroup-athena-vs  
 Title: "Cancer histology subgroup: Athena"
 Description: "Codes identifing the histology subgroup of the cancer."
@@ -161,11 +161,11 @@ Description: "Codes identifing the histology subgroup of the cancer."
 
 ValueSet: CancerHystolgyVs
 Id: cancer-histology-athena-vs
-Title:"Cancer histology: Athena"
+Title: "Cancer histology: Athena"
 Description: "Codes identifying the histology of cancer."
 
 
-*^experimental = false
+* ^experimental = false
 
 * $athena#37156145 "Squamous cell carcinoma"  
 * $athena#37152526 "Adenocarcinoma"  

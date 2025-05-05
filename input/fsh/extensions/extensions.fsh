@@ -56,9 +56,9 @@ Title:  "Histology Morphology Behavior"
 Description: "This extension provides a mean to indicate the histology behaviours of a condition"
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Condition)
-* value[x] 1..2
+* value[x] 1..1
 * value[x] only CodeableConcept
-* valueCodeableConcept from $CancerhistologyBehaviourVS
+* valueCodeableConcept from CancerHistologyBehaviourVS
 
 
 

@@ -13,7 +13,7 @@ Usage: #definition
 * group[=].element[=].display = "CancerEpisode (M)"
 * group[=].element[=].target.code = #Condition.id
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #related
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #dateOfDiagnosis
 * group[=].element[=].display = "Date of diagnosis (biopsy or surgical piece) (M)"
 * group[=].element[=].target.code = #Condition.onsetDateTime
@@ -24,19 +24,19 @@ Usage: #definition
 * group[=].element[=].display = "Date of diagnosis (biopsy or surgical piece) (M)"
 * group[=].element[=].target.code = #Condition.evidence:diagnosisDetails.detail
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #related
-* group[=].element[=].target.comment = "see details in group2"
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "See details in group2"
 * group[=].element[+].code = #typeOfBiopsy
 * group[=].element[=].display = "Type of biopsy (M)"
 * group[=].element[=].target.code = #Condition.evidence:diagnosisDetails.detail
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #related
-* group[=].element[=].target.comment = "see details in group2"
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "See details in group2"
 * group[=].element[+].code = #biopsyDoneBy
 * group[=].element[=].display = "Biopsy done by (M)"
 * group[=].element[=].target.code = #Condition.evidence:diagnosisDetails.detail
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #related
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "see details in group2"
 * group[=].element[+].code = #ageAtDiagnosis
 * group[=].element[=].display = "Age at diagnosis (M)"
@@ -49,37 +49,48 @@ Usage: #definition
 * group[=].element[=].target.code = #Condition.extension:condition-dueTo
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "true' when extension:condition-dueTo.valueCodeableConcept = $sct#108290001 'Radiation oncology AND/OR radiotherapy'"
+* group[=].element[=].target.comment = "'true' when extension:condition-dueTo.valueCodeableConcept = $sct#108290001 'Radiation oncology AND/OR radiotherapy'"
 * group[=].element[+].code = #biopsyGrading
 * group[=].element[=].display = "Biopsy grading (O)"
 * group[=].element[=].target.code = #Condition.stage.summary
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #histologyGroup
-* group[=].element[=].display = "Histology group (R)"
+* group[=].element[=].display = "Histology group (O)"
 * group[=].element[=].target.code = #Condition.histologyMorphologyBehavior
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "The value must be one of the ones in ValueSet: Cancer histology: Athena"
 * group[=].element[+].code = #site
-* group[=].element[=].display = "Site (R)"
+* group[=].element[=].display = "Site (O)"
 * group[=].element[=].target.code = #Condition.bodySite:site
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "The value must be one of the ones in Site: Athena"
 * group[=].element[+].code = #histologySubgroup
-* group[=].element[=].display = "Histology subgroup (M)"
-* group[=].element[=].target.code = #Condition.histologyMorphologySubgroupBehavior
+* group[=].element[=].display = "Histology subgroup (O)"
+* group[=].element[=].target.code = #Condition.histologyMorphologyBehavior
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "The value must be one of the ones in ValueSet: Cancer histology subgroup: Athena"
 * group[=].element[+].code = #subsite
-* group[=].element[=].display = "Subsite (R)"
-* group[=].element[=].target.code = #Condition.bodySite:subsite
+* group[=].element[=].display = "Subsite (O)"
+* group[=].element[=].target.code = #Condition.bodySite:site
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "The value must be one of the ones in Subsites: Athena"
 * group[=].element[+].code = #diagnosisCode
-* group[=].element[=].display = "Diagnosis code (R)"
+* group[=].element[=].display = "Diagnosis code (M)"
 * group[=].element[=].target.code = #Condition.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "If HNC, the value must be one of the ones in ValueSet: HNC ConditionList: Athen. If Sarc, the value must be one of the ones in ValueSet: Sarcome List: Athena"
+* group[=].element[+].code = #diagnosisCode
+* group[=].element[=].display = "Diagnosis code (M)"
+* group[=].element[=].target.code = #Condition.Condition.evidence:diagnosisDetails.detail
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "See details in group2"
 * group[=].element[+].code = #tumorSize
 * group[=].element[=].display = "Tumor Size (M)"
 * group[=].element[=].target.code = #Condition.evidence:simpleResult.detail.valueQuantity
@@ -96,7 +107,7 @@ Usage: #definition
 * group[=].element[=].display = "Superficial depth (M)"
 * group[=].element[=].target.code = #Condition.evidence:simpleResult.detail.valueQuantity
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #nan
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Where detail.resolve().ofType(Observation).code is $athena#36768749"
 * group[=].element[+].code = #deepDepth
 * group[=].element[=].display = "Deep depth (M)"
@@ -108,7 +119,7 @@ Usage: #definition
 * group[=].element[=].display = "Deep depth (M)"
 * group[=].element[=].target.code = #Condition.evidence:simpleResult.detail.valueQuantity
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #nan
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Where detail.resolve().ofType(Observation).code is $athena#36768749"
 * group[=].element[+].code = #biopsyMitoticCount
 * group[=].element[=].display = "Biopsy Mitotic count (M)"
@@ -158,7 +169,8 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #diagnosisCode
-* group[=].element[=].display = "Diagnosis code (R)"
+* group[=].element[=].display = "Diagnosis code (M)"
 * group[=].element[=].target.code = #Observation.valueCodeableConcept
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "If HNC, the value must be one of the ones in ValueSet: HNC ConditionList: Athen. If Sarc, the value must be one of the ones in ValueSet: Sarcome List: Athena"

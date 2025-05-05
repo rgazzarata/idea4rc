@@ -125,8 +125,6 @@ Alias: $mcode-laterality-qualifier-vs = http://hl7.org/fhir/us/mcode/ValueSet/mc
 Alias: $mcode-body-location-qualifier-vs = http://hl7.org/fhir/us/mcode/ValueSet/mcode-body-location-qualifier-vs
 Alias: $absent-or-unknown-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-procedures-uv-ips
 
-
-
 // ---- Extensions
 Alias: $condition-related = http://hl7.org/fhir/StructureDefinition/condition-related
 Alias: $mcode-body-location-qualifier = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-body-location-qualifier
